@@ -349,7 +349,7 @@ def kurumi_about_callback(update, context):
     query = update.callback_query
     if query.data == "kurumi_":
         query.message.edit_text(
-            text=""" ℹ️ I'm *KURUMI*, a powerful group management bot built to help you manage your group easily [.](https://telegra.ph/file/4aeb6657d5829df00dfe4.jpg) 
+            text=""" ℹ️ I'm *KURUMI*, a powerful group management bot built to help you manage your group easily[.](https://telegra.ph/file/4aeb6657d5829df00dfe4.jpg) 
                  \nHere is some basic uses for new users :- [CLICK HERE](https://telegra.ph/Basic-Uses-Of-Kurumi-04-15) 
                  \n❍ I can restrict users.
                  \n❍ I can greet users with customizable welcome messages and even set a group's rules.
