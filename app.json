@@ -167,6 +167,11 @@
          "description": "Don't change the ./",
          "required": true,
          "value": "./"
+      }, 
+      "BOT_ID": {
+         "description": "Use Any Other Bot To Get It.",
+         "required": true,
+         "value": ""
       }
   },
   "buildpacks": [
