@@ -196,6 +196,7 @@ finally:
 
    LOGGER.info("Your redis server is now alive!")
 
+
 if not SPAMWATCH_API:
     sw = None
     LOGGER.warning("SpamWatch API key missing! recheck your config.")
