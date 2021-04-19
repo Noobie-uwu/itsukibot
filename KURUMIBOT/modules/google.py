@@ -285,7 +285,9 @@ __help__ = """
  - /phone <number> : Get info of phone numbers.
  - /app <Appname> : Get download link of playstore app and info.
  - /imdb <anime/movie name> : get IMDb details of the anime or movie.
- - /wttr <country/state/city> : get weather details of ur place. 
+ - /wttr <country/state/city> : get weather details of ur place.
+ - /reverse: Does a *reverse image search* of the media which it was replied to.
+
 """
 
 __mod_name__ = "Google"
