@@ -94,14 +94,14 @@ buttons = [
     ], 
     [
         InlineKeyboardButton(
-            text="🔔Updates🔔", url="https://t.me/hiroiscool"
+            text="🔔Updates🔔", url="https://t.me/ratatoskr_org"
         ),
     ], 
 ]
 
 
 HELP_STRINGS = """
-`Hi.. I'm` [🙋🏻](https://telegra.ph/file/99bbcc3b8564804dc2ab0.jpg)
+`Hi.. I'm` [🙋🏻](https://telegra.ph/file/acf69c1a001c0fa1747e6.png)
 `Click on the buttons below to get documentation about specific modules..`"""
 
 
