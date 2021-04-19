@@ -67,12 +67,12 @@ def addsudo(update: Update, context: CallbackContext) -> str:
         return ""
 
     if user_id in DEMONS:
-        rt += "Requested HA to promote a A-Class Spirit to S-Class Spirit."
+        rt += "Requested Ratatoskr to promote a A-Class Spirit to S-Class Spirit."
         data['supports'].remove(user_id)
         DEMONS.remove(user_id)
 
     if user_id in WOLVES:
-        rt += "Requested HA to promote a C-Class Spirit to S-Class Spirit."
+        rt += "Requested Ratatoskr to promote a C-Class Spirit to S-Class Spirit."
         data['whitelists'].remove(user_id)
         WOLVES.remove(user_id)
 
@@ -122,7 +122,7 @@ def addsupport(
         data = json.load(infile)
 
     if user_id in DRAGONS:
-        rt += "Requested HA to demote this S-Class Spirit to A-Class Spirit"
+        rt += "Requested Ratatoskr to demote this S-Class Spirit to A-Class Spirit"
         data['sudos'].remove(user_id)
         DRAGONS.remove(user_id)
 
@@ -131,7 +131,7 @@ def addsupport(
         return ""
 
     if user_id in WOLVES:
-        rt += "Requested HA to promote this C-Class Spirit to A-Class Spirit"
+        rt += "Requested Ratatoskr to promote this C-Class Spirit to A-Class Spirit"
         data['whitelists'].remove(user_id)
         WOLVES.remove(user_id)
 
@@ -238,7 +238,7 @@ def addtiger(update: Update, context: CallbackContext) -> str:
         DRAGONS.remove(user_id)
 
     if user_id in DEMONS:
-        rt += "This user is already a A-Class Spirit, Demoting to B-Class Spirit."
+        rt += "This user is an A-Class Spirit, Demoting to B-Class Spirit."
         data['supports'].remove(user_id)
         DEMONS.remove(user_id)
 
@@ -294,7 +294,7 @@ def removesudo(update: Update, context: CallbackContext) -> str:
         data = json.load(infile)
 
     if user_id in DRAGONS:
-        message.reply_text("Requested HA to make this user a Human again")
+        message.reply_text("Requested Ratatoskr to make this user a Human again")
         DRAGONS.remove(user_id)
         data['sudos'].remove(user_id)
 
@@ -338,7 +338,7 @@ def removesupport(update: Update, context: CallbackContext) -> str:
         data = json.load(infile)
 
     if user_id in DEMONS:
-        message.reply_text("Requested HA to make this user a Human again")
+        message.reply_text("Requested Ratatoskr to make this user a Human again")
         DEMONS.remove(user_id)
         data['supports'].remove(user_id)
 
