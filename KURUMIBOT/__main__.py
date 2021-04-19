@@ -83,12 +83,12 @@ buttons = [
             text="➕️ Add KURUMI TO YOUR GROUP ➕️", url="t.me/Kurumi_0bot?startgroup=true"),
     ],
     [
-        InlineKeyboardButton(text=" 🔰ABOUT", callback_data="kurumi_"),
-        InlineKeyboardButton(text=" 🌀COMMANDS", callback_data="help_back"),
+        InlineKeyboardButton(text="🔰ABOUT", callback_data="kurumi_"),
+        InlineKeyboardButton(text=" ⚙COMMANDS⚙", callback_data="help_back"),
     ],
     [
         InlineKeyboardButton(
-            text="⚜️My God", url="https://t.me/Hiro_jazz"),
+            text="My God❤", url="https://t.me/Hiro_jazz"),
         InlineKeyboardButton(
             text="🚨Support🚨", url="https://t.me/kurumisupport"),
     ], 
