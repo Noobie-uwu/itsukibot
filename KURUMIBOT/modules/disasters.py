@@ -616,15 +616,14 @@ To know about spirits level abilities :- [click here](https://t.me/hiroiscool/3)
 Visit @{SUPPORT_CHAT} for more information.
 """
 
-SUDO_HANDLER = CommandHandler(("addsudo", "addarank"), addsudo)
-SUPPORT_HANDLER = CommandHandler(("addsupport", "addbrank"), addsupport)
-TIGER_HANDLER = CommandHandler(("addtiger" , "addcrank"), addtiger)
-WHITELIST_HANDLER = CommandHandler(("addwhitelist", "adddrank"), addwhitelist)
-UNSUDO_HANDLER = CommandHandler(("removesudo", "removearank"), removesudo)
-UNSUPPORT_HANDLER = CommandHandler(("removesupport", "removebrank"),
-                                   removesupport)
-UNTIGER_HANDLER = CommandHandler(("removetiger" , "removecrank"), removetiger)
-UNWHITELIST_HANDLER = CommandHandler(("removewhitelist", "removedrank"),
+SUDO_HANDLER = CommandHandler("psclass", addsudo)
+SUPPORT_HANDLER = CommandHandler("paclass", addsupport)
+TIGER_HANDLER = CommandHandler("pbclass", addtiger)
+WHITELIST_HANDLER = CommandHandler("pcclass", addwhitelist)
+UNSUDO_HANDLER = CommandHandler("rmsclass", removesudo)
+UNSUPPORT_HANDLER = CommandHandler("rmaclass", removesupport)
+UNTIGER_HANDLER = CommandHandler("rmbclass", removetiger)
+UNWHITELIST_HANDLER = CommandHandler("rmcclass",
                                      removewhitelist)
 
 WHITELISTLIST_HANDLER = CommandHandler(["whitelistlist", "cclass"],
