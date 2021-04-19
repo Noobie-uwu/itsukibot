@@ -528,7 +528,7 @@ __help__ = f"""
 Commands listed here only work for users with special access are mainly used for troubleshooting, debugging purposes.
 Group admins/group owners do not need these commands. 
 
-To know about spirits level abilities :- [click here](https://t.me/hiroiscool/3) 
+To know about spirits level abilities :- [click here](https://t.me/ratatoskr_org/3) 
 
  ╔ *List all special users:*
  ╠ `/ssclass`*:* Lists all SS-Class Spirits
