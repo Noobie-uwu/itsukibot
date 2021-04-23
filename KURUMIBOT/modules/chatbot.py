@@ -9,7 +9,6 @@ __help__ = """
 /chatbot [ON|OFF] To Enable Or Disable ChatBot In Your Chat."""
 
 active_chats_bot = []
-active_chats_ubot = []
 
 
 # Enabled | Disable Chatbot
