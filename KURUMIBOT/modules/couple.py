@@ -1,4 +1,4 @@
-from KURUMIBOT import app
+from KURUMIBOT import pbot
 from KURUMIBOT.utils.errors import capture_err
 from KURUMIBOT.utils.dbfunctions import get_couple, save_couple
 from pyrogram import filters
