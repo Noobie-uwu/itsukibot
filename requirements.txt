@@ -55,6 +55,7 @@ nekos.py
 tgcrypto
 hachoir
 configparser
+dnspython
 bing_image_downloader
 parsel
 urllib3
