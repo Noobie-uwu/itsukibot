@@ -7,6 +7,7 @@ import spamwatch
 import telegram.ext as tg
 from pyrogram import Client, errors
 from telethon import TelegramClient
+from motor.motor_asyncio import AsyncIOMotorClient as MongoClient
 from Python_ARQ import ARQ
 
 StartTime = time.time()
@@ -192,7 +193,9 @@ else:
 updater = tg.Updater(TOKEN, workers=WORKERS, use_context=True)
 telethn = TelegramClient("kurumi", API_ID, API_HASH)
 pbot = Client("kurumipbot", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
+mongo_client = MongoClient(MONGO_DB_URI)
 arq = ARQ(ARQ_API)
+db = mongo_client.kurumi
 dispatcher = updater.dispatcher
 
 DRAGONS = list(DRAGONS) + list(DEV_USERS)
