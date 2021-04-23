@@ -60,6 +60,7 @@ parsel
 urllib3
 heroku3
 telegraph
+motor
 youtube_search
 search_engine_parser
 envparse
