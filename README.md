@@ -18,7 +18,7 @@ The Support group can be reached out to at [KURUMI Support](https://t.me/kurumis
  - Your code must be open source and a link to your fork's repository must be there in the start reply of the bot.
 
 <details>
-  <summary>Steps to deploy on Heroku !!</summary>
+  <summary>To Deploy on Heroku !!</summary>
 
 ```
 Fill in all the details, Deploy!
@@ -42,7 +42,7 @@ This is because markdown parsing is done by iterating through a dict, which is o
 There are two possible ways of configuring your bot: a config.py file, or ENV variables.
 
 The preferred version is to use a `config.py` file, as it makes it easier to see all your settings grouped together.
-This file should be placed in your `SungJinWoo` folder, alongside the `__main__.py` file. 
+This file should be placed in your `KURUMIBOT` folder, alongside the `__main__.py` file. 
 This is where your bot token will be loaded from, as well as your database URI (if you're using a database), and most of
 your other settings.
 
@@ -54,8 +54,8 @@ An example `config.py` file could be:
 from KURUMIBOT.sample_config import Config
 
 class Development(Config):
-    OWNER_ID = 254318997  # your telegram ID
-    OWNER_USERNAME = "SonOfLars"  # your telegram username
+    OWNER_ID = 1234567890  # your telegram ID
+    OWNER_USERNAME = "Zaidaro"  # your telegram username
     API_KEY = "your bot api key"  # your api key, as provided by the @botfather
     SQLALCHEMY_DATABASE_URI = 'postgresql://username:password@localhost:5432/database'  # sample db credentials
     JOIN_LOGGER = '-1234567890' # some group chat that your bot is a member of
@@ -170,6 +170,5 @@ For starters click on this button
 
 
 ## Credits
-The bot is based on the original work done by [Hirojazz](https://github.com/Hirojazz) also futher development done by KURUMI Chan creator.
-This repo was just revamped to suit an Anime-centric community. All original credits go to Paul and his dedication, Without his efforts, this fork would not have been possible!
+[Hirojazz](https://github.com/Hirojazz) | [KURUMIBOT](https://github.com/Hirojazz/KURUMIBOT) 
 
