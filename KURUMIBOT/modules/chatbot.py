@@ -4,10 +4,6 @@ from KURUMIBOT.utils.filter_groups import chatbot_group
 from pyrogram import filters
 
 
-__mod_name__ = "ChatBot"
-__help__ = """
-/chatbot [ON|OFF] To Enable Or Disable ChatBot In Your Chat."""
-
 active_chats_bot = []
 
 
@@ -60,3 +56,7 @@ async def chatbot_talk(_, message):
     luna = await arq.luna(query)
     response = luna.response
     await message.reply_text(response)
+
+__mod_name__ = "ChatBot"
+__help__ = """
+/chatbot [ON|OFF] To Enable Or Disable ChatBot In Your Chat."""
