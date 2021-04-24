@@ -5,8 +5,6 @@ from pyrogram import filters
 import random
 from datetime import datetime
 
-__mod_name__ = "Couple"
-__help__ = "/couples - To Choose Couple Of The Day"
 
 
 # Date and time
@@ -81,3 +79,6 @@ __New couple of the day may be chosen at 12AM {tomorrow}__"""
     except Exception as e:
         print(e)
         await message.reply_text(e)
+
+__mod_name__ = "Couple"
+__help__ = "/couples - To Choose Couple Of The Day"
