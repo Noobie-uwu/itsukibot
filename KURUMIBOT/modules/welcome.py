@@ -224,12 +224,7 @@ def new_member(update: Update, context: CallbackContext):
 
             # Welcome yourself
             elif new_mem.id == bot.id:
-                creator = None
-                for x in bot.bot.get_chat_administrators(
-                        update.effective_chat.id):
-                    if x.status == 'creator':
-                        creator = x.user
-                        break
+                update.effective_message.reply_text("OwO Thanks for adding me...\nMake me admin to use all features in me.")
                 if creator:
                     bot.send_message(
                         JOIN_LOGGER,
