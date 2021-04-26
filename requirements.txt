@@ -43,7 +43,7 @@ hachoir
 pybase64
 pySmartDL
 validators
-pyrogram
+Pyrogram
 nltk
 aiohttp>=3.7.4
 Pillow>=4.2.0
@@ -52,7 +52,7 @@ googletrans
 google_trans_new
 pyrate-limiter
 nekos.py
-tgcrypto
+TgCrypto
 hachoir
 configparser
 dnspython
