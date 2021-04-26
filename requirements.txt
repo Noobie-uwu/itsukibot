@@ -43,7 +43,7 @@ hachoir
 pybase64
 pySmartDL
 validators
-Pyrogram
+pyrogram>=1.0.7
 nltk
 aiohttp>=3.7.4
 Pillow>=4.2.0
