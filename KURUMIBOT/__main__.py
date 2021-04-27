@@ -19,6 +19,7 @@ from KURUMIBOT import (
     dispatcher,
     StartTime,
     telethn,
+    pbot, 
     updater,
 )
 
