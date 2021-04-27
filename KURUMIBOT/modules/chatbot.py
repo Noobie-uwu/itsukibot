@@ -57,3 +57,6 @@ async def chatbot_talk(_, message):
     response = luna.response
     await message.reply_text(response)
 
+mod_name = "ChatBot"
+help = """
+/chatbot [ON|OFF] To Enable Or Disable ChatBot In Your Chat."""
