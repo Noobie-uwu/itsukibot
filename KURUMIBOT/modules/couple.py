@@ -80,3 +80,5 @@ __New couple of the day may be chosen at 12AM {tomorrow}__"""
         print(e)
         await message.reply_text(e)
 
+mod_name = "Couple"
+help = "/couples - To Choose Couple Of The Day"
