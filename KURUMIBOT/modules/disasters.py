@@ -87,7 +87,7 @@ def addsudo(update: Update, context: CallbackContext) -> str:
             user_member.first_name))
 
     log_message = (
-        f"#SUDO\n"
+        f"#Sclass\n"
         f"<b>Admin:</b> {mention_html(user.id, html.escape(user.first_name))}\n"
         f"<b>User:</b> {mention_html(user_member.id, html.escape(user_member.first_name))}"
     )
@@ -142,10 +142,10 @@ def addsupport(
         json.dump(data, outfile, indent=4)
 
     update.effective_message.reply_text(
-        rt + f"\n{user_member.first_name} was added as a AAA-Class Spirit!")
+        rt + f"\n{user_member.first_name} was added as a A-Class Spirit!")
 
     log_message = (
-        f"#SUPPORT\n"
+        f"#Aclass\n"
         f"<b>Admin:</b> {mention_html(user.id, html.escape(user.first_name))}\n"
         f"<b>User:</b> {mention_html(user_member.id, html.escape(user_member.first_name))}"
     )
@@ -201,7 +201,7 @@ def addwhitelist(update: Update, context: CallbackContext) -> str:
         f"\nSuccessfully promoted {user_member.first_name} to a C-Class Spirit!")
 
     log_message = (
-        f"#WHITELIST\n"
+        f"#Cclass\n"
         f"<b>Admin:</b> {mention_html(user.id, html.escape(user.first_name))} \n"
         f"<b>User:</b> {mention_html(user_member.id, html.escape(user_member.first_name))}"
     )
@@ -263,7 +263,7 @@ def addtiger(update: Update, context: CallbackContext) -> str:
     )
 
     log_message = (
-        f"#TIGER\n"
+        f"#Bclass\n"
         f"<b>Admin:</b> {mention_html(user.id, html.escape(user.first_name))} \n"
         f"<b>User:</b> {mention_html(user_member.id, html.escape(user_member.first_name))}"
     )
