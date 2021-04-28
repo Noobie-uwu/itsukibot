@@ -89,14 +89,9 @@ buttons = [
     ],
     [
         InlineKeyboardButton(
-            text="My God❤", url="https://t.me/Hiro_jazz"),
+            text="🔔Updates", url="https://t.me/ratatoskr_org"),
         InlineKeyboardButton(
-            text="🚨Support🚨", url="https://t.me/kurumisupport"),
-    ], 
-    [
-        InlineKeyboardButton(
-            text="🔔Updates🔔", url="https://t.me/ratatoskr_org"
-        ),
+            text="🚨Support", url="https://t.me/kurumisupport"),
     ], 
 ]
 
