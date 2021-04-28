@@ -75,7 +75,7 @@ def get_readable_time(seconds: int) -> str:
 
 PM_START_TEXT = """
 `Hello` [🙋🏻‍](https://telegra.ph/file/99bbcc3b8564804dc2ab0.jpg) `My name is` *KURUMI*
-`I'm here to help you Save your groups with My Zaphkiel` *📚Commands*   
+`I'm here to help you Save your groups with My Zaphkiel` . 
 """
 
 buttons = [
@@ -98,7 +98,7 @@ buttons = [
 
 HELP_STRINGS = """
 `Hi.. I'm` [🙋🏻](https://telegra.ph/file/acf69c1a001c0fa1747e6.png)
-`Click on the buttons below to get documentation about specific modules..`"""
+`Click on the buttons below to know about specific modules..`"""
 
 
 KURUMI_IMG = "https://telegra.ph/file/e1d87ec2bdac4e3cfe0a4.mp4"
