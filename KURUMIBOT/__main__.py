@@ -85,7 +85,7 @@ buttons = [
     ],
     [
         InlineKeyboardButton(text="🔰ABOUT", callback_data="kurumi_"),
-        InlineKeyboardButton(text=" ⚙COMMANDS⚙", callback_data="help_back"),
+        InlineKeyboardButton(text=" ⚙COMMANDS", callback_data="help_back"),
     ],
     [
         InlineKeyboardButton(
