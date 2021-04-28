@@ -350,16 +350,14 @@ def kurumi_about_callback(update, context):
     query = update.callback_query
     if query.data == "kurumi_":
         query.message.edit_text(
-            text=""" ℹ️ I'm *KURUMI*, a powerful group management bot built to help you manage your group easily[.](https://telegra.ph/file/4aeb6657d5829df00dfe4.jpg) 
-                 \nHere is some basic uses for new users :- [CLICK HERE](https://telegra.ph/Basic-Uses-Of-Kurumi-04-15) 
+            text=""" ℹ️ I'm *KURUMI*, a powerful group management bot built to help you manage your group easily. 
+                 \nBasic uses for Starters :- [CLICK HERE](https://telegra.ph/Basic-Uses-Of-Kurumi-04-15) 
                  \n❍ I can restrict users.
-                 \n❍ I can greet users with customizable welcome messages and even set a group's rules.
-                 \n❍ I have an advanced anti-flood system.
+                 \n❍ I can greet users with customizable welcome messages and set group's rules.
+                 \n❍ I have an anti-flood system which will stop users from spamming and flooding the group. 
                  \n❍ I can warn users until they reach max warns, with each predefined actions such as ban, mute, kick, etc.
                  \n❍ I have a note keeping system, blacklists, and even predetermined replies on certain keywords.
-                 \n❍ I check for admins' permissions before executing any command and more stuffs
-                 \nI can give u songs, anime quotes, etc.. 
-                 \n\n_KURUMI is licensed under the GNU General Public License v3.0_
+                 \n❍ I can give u songs, anime quotes, etc..
                  \n\nIf you have any question about KURUMI, let us know at @kurumisupport .""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
