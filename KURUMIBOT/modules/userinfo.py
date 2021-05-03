@@ -107,7 +107,7 @@ def hpmanager(user):
 
 def make_bar(per):
     done = min(round(per / 10), 10)
-    return "■" * done + "□" * (10 - done)
+    return "◉" * done + "◎" * (10 - done)
 
 
 @run_async
@@ -226,7 +226,7 @@ def info(update: Update, context: CallbackContext):
     rep = message.reply_text(
         "<code>Appraising...</code>", parse_mode=ParseMode.HTML)
 
-    text = (f"╒═══「<b>🔰Appraisal results🔰:</b> 」\n"
+    text = (f"╒═══「<b>🔰Info Results🔰:</b> 」\n"
             f"◾ ID: <code>{user.id}</code>\n"
             f"◾ First Name: {html.escape(user.first_name)}")
 
@@ -317,16 +317,14 @@ def info(update: Update, context: CallbackContext):
     if INFOPIC:
         try:
             profile = context.bot.get_user_profile_photos(user.id).photos[0][-1]
-            _file = bot.get_file(profile["file_id"])
-            _file.download(f"{user.id}.png")
-
-            message.reply_document(
-                document=open(f"{user.id}.png", "rb"),
-                caption=(text),
-                parse_mode=ParseMode.HTML,
-                disable_web_page_preview=True)
-
-            os.remove(f"{user.id}.png")
+            context.bot.sendChatAction(chat.id, "upload_photo")
+            context.bot.send_photo(
+            chat.id,
+            photo=profile,
+            caption=(text),
+            parse_mode=ParseMode.HTML,
+            disable_web_page_preview=True,
+        )
         # Incase user don't have profile pic, send normal text
         except IndexError:
             message.reply_text(
