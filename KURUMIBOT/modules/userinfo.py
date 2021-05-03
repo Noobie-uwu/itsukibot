@@ -107,7 +107,7 @@ def hpmanager(user):
 
 def make_bar(per):
     done = min(round(per / 10), 10)
-    return "◉" * done + "◎" * (10 - done)
+    return "✦" * done + "✧" * (10 - done)
 
 
 @run_async
@@ -227,19 +227,19 @@ def info(update: Update, context: CallbackContext):
         "<code>Appraising...</code>", parse_mode=ParseMode.HTML)
 
     text = (f"╒═══「<b>🔰Info Results🔰:</b> 」\n"
-            f"◾ ID: <code>{user.id}</code>\n"
-            f"◾ First Name: {html.escape(user.first_name)}")
+            f"❂ ID: <code>{user.id}</code>\n"
+            f"❂ First Name: {html.escape(user.first_name)}")
 
     if user.last_name:
-        text += f"\n◾ Last Name: {html.escape(user.last_name)}"
+        text += f"\n❂ Last Name: {html.escape(user.last_name)}"
 
     if user.username:
-        text += f"\n◾ Username: @{html.escape(user.username)}"
+        text += f"\n❂ Username: @{html.escape(user.username)}"
 
-    text += f"\n◾ Permalink: {mention_html(user.id, 'link')}"
+    text += f"\n❂ Permalink: {mention_html(user.id, 'link')}"
 
     if chat.type != "private" and user_id != bot.id:
-        _stext = "\n◾ Presence: <code>{}</code>"
+        _stext = "\n❂ Presence: <code>{}</code>"
 
         afk_st = is_afk(user.id)
         if afk_st:
