@@ -26,7 +26,7 @@ async def _(event):
         xx = f"{lll}"
     else:
         xx = ""
-    async for bb in e.client.iter_participants(e.chat_id, 99):
+    async for bb in e.client.iter_participants(event.chat_id, 99):
         users = users + 1
         x = bb.status
         y = bb.participant
@@ -57,5 +57,5 @@ async def _(event):
         if "bot" in okk:
             if bb.bot:
                 xx += f"\n[{get_display_name(bb)}](tg://user?id={bb.id})"
-    await event.client.send_message(e.chat_id, xx)
+    await event.client.send_message(event.chat_id, xx)
     await event.delete()
