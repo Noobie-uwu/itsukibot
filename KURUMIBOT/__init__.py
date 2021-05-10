@@ -189,7 +189,6 @@ else:
 updater = tg.Updater(TOKEN, workers=WORKERS, use_context=True)
 telethn = TelegramClient("kurumi", API_ID, API_HASH)
 arq = ARQ(ARQ_API)
-db = mongo_client.kurumi
 dispatcher = updater.dispatcher
 
 DRAGONS = list(DRAGONS) + list(DEV_USERS)
