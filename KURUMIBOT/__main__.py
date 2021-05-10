@@ -101,6 +101,8 @@ HELP_STRINGS = """
 
 
 KURUMI_IMG = "https://telegra.ph/file/0b9498fda7fe34f8edaaa.jpg"
+ITSUKI_IMG = "https://telegra.ph/file/f45c99d01104d768bb514.jpg"
+NAKANO_IMG = "https://telegra.ph/file/be15b90841118c49f6ef4.jpg"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
 Click here to donate in [Paypal](https://www.paypal.me/zameeljaz)"""
@@ -212,8 +214,8 @@ def start(update: Update, context: CallbackContext):
                 timeout=60,
             )
     else:
-        update.effective_message.reply_text(
-            "I'm awake already!\n<b>Haven't slept since:</b> <code>{}</code>"
+        update.effective_message.reply_photo(
+           ITSUKI_IMG, caption=f"I'm awake already!\n<b>Haven't slept since:</b> <code>{}</code>"
             .format(uptime),
             parse_mode=ParseMode.HTML)
 
