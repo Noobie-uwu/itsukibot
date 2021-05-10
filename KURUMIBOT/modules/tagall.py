@@ -8,7 +8,7 @@ from telethon.tl.types import UserStatusOnline as onn
 from telethon.tl.types import UserStatusRecently as rec
 from telethon.utils import get_display_name
 
-from KURUMIBOT import telethon *
+from KURUMIBOT import telethon
 
 
 @registor(
