@@ -59,3 +59,23 @@ async def _(event):
                 xx += f"\n[{get_display_name(bb)}](tg://user?id={bb.id})"
     await event.client.send_message(event.chat_id, xx)
     await event.delete()
+
+__mod_name__ = "Tagger"
+
+__help__ = """
+✘ Commands Available -
+• `{i}tagall`
+    Tag Top 100 Members of chat.
+• `{i}tagadmins`
+    Tag Admins of that chat.
+• `{i}tagowner`
+    Tag Owner of that chat
+• `{i}tagbots`
+    Tag Bots of that chat.
+• `{i}tagrec`
+    Tag recently Active Members.
+• `{i}tagon`
+    Tag online Members(work only if privacy off).
+• `{i}tagoff`
+    Tag Offline Members(work only if privacy off).
+"""
