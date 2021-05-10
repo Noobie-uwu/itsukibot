@@ -64,18 +64,8 @@ __mod_name__ = "Tagger"
 
 __help__ = """
 ✘ Commands Available -
-• `{i}tagall`
-    Tag Top 100 Members of chat.
-• `{i}tagadmins`
-    Tag Admins of that chat.
-• `{i}tagowner`
-    Tag Owner of that chat
-• `{i}tagbots`
-    Tag Bots of that chat.
-• `{i}tagrec`
-    Tag recently Active Members.
-• `{i}tagon`
-    Tag online Members(work only if privacy off).
-• `{i}tagoff`
-    Tag Offline Members(work only if privacy off).
+• `/tagall`   : Tag Top 100 Members of chat.
+• `/tagadmins`: Tag Admins of that chat.
+• `/tagowner` : Tag Owner of that chat
+• `/tagbots`  : Tag Bots of that chat.
 """
