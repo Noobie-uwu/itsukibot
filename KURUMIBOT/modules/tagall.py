@@ -14,7 +14,6 @@ from KURUMIBOT.events import register
 
 @register(
     pattern="^/tag(on|off|all|bots|rec|admins|owner)?(.*)",
-    groups_only=True,
 )
 async def _(event):
     okk = event.text
