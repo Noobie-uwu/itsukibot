@@ -11,7 +11,7 @@ from telethon.utils import get_display_name
 from KURUMIBOT import telethn
 
 
-@registor(
+@register(
     pattern="^/tag(on|off|all|bots|rec|admins|owner)?(.*)",
     groups_only=True,
 )
