@@ -9,6 +9,7 @@ from telethon.tl.types import UserStatusRecently as rec
 from telethon.utils import get_display_name
 
 from KURUMIBOT import telethn
+from KURUMIBOT.events import register
 
 
 @register(
