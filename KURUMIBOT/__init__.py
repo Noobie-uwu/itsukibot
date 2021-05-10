@@ -5,7 +5,6 @@ import time
 import spamwatch
 
 import telegram.ext as tg
-from pyrogram import Client, errors
 from telethon import TelegramClient
 from motor.motor_asyncio import AsyncIOMotorClient as MongoClient
 from Python_ARQ import ARQ
@@ -73,7 +72,6 @@ if ENV:
     BOT_ID = int(os.environ.get("BOT_ID", None))
     ARQ_API = os.environ.get("ARQ_API_LINK", None) 
     DB_URI = os.environ.get("DATABASE_URL")
-    MONGO_DB_URI = os.environ.get("MONGO_DB_URI", None)
     DONATION_LINK = os.environ.get("DONATION_LINK")
     HEROKU_API_KEY = os.environ.get("HEROKU_API_KEY", None)
     HEROKU_APP_NAME = os.environ.get("HEROKU_APP_NAME", None)
@@ -145,7 +143,6 @@ else:
     API_HASH = Config.API_HASH
 
     DB_URI = Config.SQLALCHEMY_DATABASE_URI
-    MONGO_DB_URI = Config.MONGO_DB_URI
     HEROKU_API_KEY = Config.HEROKU_API_KEY
     HEROKU_APP_NAME = Config.HEROKU_APP_NAME
     TEMP_DOWNLOAD_DIRECTORY = Config.TEMP_DOWNLOAD_DIRECTORY
@@ -192,8 +189,6 @@ else:
 
 updater = tg.Updater(TOKEN, workers=WORKERS, use_context=True)
 telethn = TelegramClient("kurumi", API_ID, API_HASH)
-pbot = Client("kurumipbot", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
-mongo_client = MongoClient(MONGO_DB_URI)
 arq = ARQ(ARQ_API)
 db = mongo_client.kurumi
 dispatcher = updater.dispatcher
