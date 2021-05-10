@@ -73,14 +73,14 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-`Hello` [🙋🏻‍](https://telegra.ph/file/99bbcc3b8564804dc2ab0.jpg) `My name is` *KURUMI*
-`I'm here to help you Save your groups with My Zaphkiel` . 
+Hello [🙋🏻‍](https://telegra.ph/file/e030840ce4313412c1e38.jpg) My name is *Itsuki Nakano*
+I'm here to help you maintain groups . 
 """
 
 buttons = [
     [
         InlineKeyboardButton(
-            text="➕️ Add KURUMI TO YOUR GROUP ➕️", url="t.me/Kurumi_0bot?startgroup=true"),
+            text="➕️ Add ITSUKI TO YOUR GROUP ➕️", url="t.me/ItsukiNakanoRoBot?startgroup=true"),
     ],
     [
         InlineKeyboardButton(text="🔰ABOUT", callback_data="kurumi_"),
@@ -88,19 +88,19 @@ buttons = [
     ],
     [
         InlineKeyboardButton(
-            text="🔔Updates", url="https://t.me/ratatoskr_org"),
+            text="🔔Updates", url="https://t.me/"),
         InlineKeyboardButton(
-            text="🚨Support", url="https://t.me/kurumisupport"),
+            text="🚨Support", url="https://t.me/"),
     ], 
 ]
 
 
 HELP_STRINGS = """
-`Hi.. I'm` [🙋🏻](https://telegra.ph/file/acf69c1a001c0fa1747e6.png)
+`Hi.. I'm` [🙋🏻](https://telegra.ph/file/700fa4f46ffcedfb995c9.jpg)
 `Click on the buttons below to know about specific modules..`"""
 
 
-KURUMI_IMG = "https://telegra.ph/file/e1d87ec2bdac4e3cfe0a4.mp4"
+KURUMI_IMG = "https://telegra.ph/file/0b9498fda7fe34f8edaaa.jpg"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
 Click here to donate in [Paypal](https://www.paypal.me/zameeljaz)"""
@@ -427,8 +427,8 @@ def get_help(update: Update, context: CallbackContext):
                 ),
             )
             return
-        update.effective_message.reply_text(
-            "Contact me in PM to get the list of possible commands.",
+        update.effective_message.reply_photo(
+           KURUMI_IMG, caption=f"Contact me in PM to get the list of possible commands.",
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
