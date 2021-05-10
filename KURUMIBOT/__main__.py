@@ -600,7 +600,7 @@ def get_settings(update: Update, context: CallbackContext):
         if is_user_admin(chat, user.id):
             text = "Click here to get this chat's settings, as well as yours."
             msg.reply_photo(
-                ITSUKI_IMG, caption=f"text",
+                ITSUKI_IMG, caption=f"Click here to check your settings.",
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
