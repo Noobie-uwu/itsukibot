@@ -214,8 +214,8 @@ def start(update: Update, context: CallbackContext):
                 timeout=60,
             )
     else:
-        update.effective_message.reply_photo(
-           ITSUKI_IMG, caption=f"I'm awake already!\n<b>Haven't slept since:</b> <code>{}</code>"
+        update.effective_message.reply_text(
+           "I'm awake already!\n<b>Haven't slept since:</b> <code>{}</code>"
             .format(uptime),
             parse_mode=ParseMode.HTML)
 
@@ -599,8 +599,8 @@ def get_settings(update: Update, context: CallbackContext):
     if chat.type != chat.PRIVATE:
         if is_user_admin(chat, user.id):
             text = "Click here to get this chat's settings, as well as yours."
-            msg.reply_text(
-                text,
+            msg.reply_photo(
+                ITSUKI_IMG, caption=f"text",
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
