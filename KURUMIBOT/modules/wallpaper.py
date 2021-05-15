@@ -1,7 +1,7 @@
 import os
 from random import choice
 from shutil import rmtree
-import googleimagesdownload as gi
+import google_images_download as googleimagesdownload
 
 from KURUMIBOT.events import register
 
