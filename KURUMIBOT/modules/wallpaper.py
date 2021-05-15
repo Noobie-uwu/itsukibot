@@ -1,5 +1,6 @@
 import os
 from random import choice
+from shutil import rmtree
 
 from KURUMIBOT.events import register
 
