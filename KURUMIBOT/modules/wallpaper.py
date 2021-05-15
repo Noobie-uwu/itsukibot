@@ -1,6 +1,7 @@
 import os
 from random import choice
 from shutil import rmtree
+from google_images_download import gi
 
 from KURUMIBOT.events import register
 
