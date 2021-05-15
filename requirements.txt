@@ -31,4 +31,4 @@ spamwatch
 alphabet_detector
 pyrate-limiter
 cachetools
-googleimagesdownload
+google_images_download
