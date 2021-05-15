@@ -1,7 +1,7 @@
 import os
 from random import choice
 from shutil import rmtree
-from google_images_download import gi
+import google_images_download
 
 from KURUMIBOT.events import register
 
@@ -12,14 +12,13 @@ async def wall(event):
         return await event.reply("Please enter a query!")
     nn = await event.reply("Processing Keep Patience...")
     query = f"hd {inp}"
-    gi = googleimagesdownload()
     args = {
         "keywords": query,
         "limit": 10,
         "format": "jpg",
         "output_directory": "./resources/downloads/",
     }
-    gi.download(args)
+    google_images_download.download(args)
     xx = choice(os.listdir(os.path.abspath(f"./resources/downloads/{query}/")))
     await event.client.send_file(event.chat_id, f"./resources/downloads/{query}/{xx}")
     rmtree(f"./resources/downloads/{query}/")
