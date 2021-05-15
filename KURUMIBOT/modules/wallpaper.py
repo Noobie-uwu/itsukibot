@@ -12,13 +12,14 @@ async def wall(event):
         return await event.reply("Please enter a query!")
     nn = await event.reply("Processing Keep Patience...")
     query = f"hd {inp}"
+    gi = google_images_download()
     args = {
         "keywords": query,
         "limit": 10,
         "format": "jpg",
         "output_directory": "./resources/downloads/",
     }
-    google_images_download.download(args)
+    gi.download(args)
     xx = choice(os.listdir(os.path.abspath(f"./resources/downloads/{query}/")))
     await event.client.send_file(event.chat_id, f"./resources/downloads/{query}/{xx}")
     rmtree(f"./resources/downloads/{query}/")
