@@ -8,8 +8,8 @@ from KURUMIBOT.events import register
 async def wall(event):
     inp = event.pattern_match.group(1)
     if not inp:
-        return await eor(event, "Please enter a query!")
-    nn = await eor(event, "Processing Keep Patience...")
+        return await event.reply("Please enter a query!")
+    nn = await event.reply("Processing Keep Patience...")
     query = f"hd {inp}"
     gi = googleimagesdownload()
     args = {
