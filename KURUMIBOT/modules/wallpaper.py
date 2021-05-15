@@ -1,7 +1,7 @@
 import os
 from random import choice
 from shutil import rmtree
-from bing_image_downloader import downloader as gi
+from bing_image_downloader import downloader
 
 from KURUMIBOT.events import register
 
@@ -18,7 +18,7 @@ async def wall(event):
         "format": "jpg",
         "output_directory": "./resources/downloads/",
     }
-    gi.download(args)
+    downloader.download(args)
     xx = choice(os.listdir(os.path.abspath(f"./resources/downloads/{query}/")))
     await event.client.send_file(event.chat_id, f"./resources/downloads/{query}/{xx}")
     rmtree(f"./resources/downloads/{query}/")
