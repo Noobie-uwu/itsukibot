@@ -6,7 +6,6 @@ import spamwatch
 
 import telegram.ext as tg
 from telethon import TelegramClient
-from Python_ARQ import ARQ
 
 StartTime = time.time()
 
@@ -188,7 +187,6 @@ else:
 
 updater = tg.Updater(TOKEN, workers=WORKERS, use_context=True)
 telethn = TelegramClient("kurumi", API_ID, API_HASH)
-arq = ARQ(ARQ_API)
 dispatcher = updater.dispatcher
 
 DRAGONS = list(DRAGONS) + list(DEV_USERS)
