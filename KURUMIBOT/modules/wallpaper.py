@@ -1,7 +1,7 @@
 import os
 from random import choice
 from shutil import rmtree
-import bing_image_downloader as gi
+from bing_image_downloader import downloader as gi
 
 from KURUMIBOT.events import register
 
