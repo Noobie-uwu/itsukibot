@@ -12,7 +12,7 @@ async def wall(event):
         return await event.reply("Please enter a query!")
     nn = await event.reply("Processing Keep Patience...")
     query = f"hd {inp}"
-    gi = google_images_download()
+    gi = googleimagesdownload()
     args = {
         "keywords": query,
         "limit": 10,
