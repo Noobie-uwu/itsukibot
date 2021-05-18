@@ -18,8 +18,7 @@ from KURUMIBOT import (
     SUPPORT_CHAT,
     dispatcher,
     StartTime,
-    telethn,
-    pbot, 
+    telethn, 
     updater,
 )
 
@@ -739,6 +738,5 @@ def main():
 
 if __name__ == "__main__":
     LOGGER.info("Successfully loaded modules: " + str(ALL_MODULES))
-    telethn.start(bot_token=TOKEN)
-    pbot.start() 
+    telethn.start(bot_token=TOKEN) 
     main()
