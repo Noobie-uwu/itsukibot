@@ -10,7 +10,7 @@ async def stickerizer(event):
 
     newtext = event.pattern_match.group(1)
     animus = [20, 32, 33, 40, 41, 42, 58]
-    sticcers = await ubot.inline_query(
+    sticcers = await event.inline_query(
         "stickerizerbot", f"#{random.choice(animus)}{(deEmojify(newtext))}"
     )
     null = await sticcers[0].download_media(TEMP_DOWNLOAD_DIRECTORY)
