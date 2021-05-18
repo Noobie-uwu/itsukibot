@@ -1,4 +1,5 @@
 wget
+pyrogram>=1.0.7
 future
 emoji
 lxml
