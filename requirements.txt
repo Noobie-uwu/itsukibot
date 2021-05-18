@@ -34,3 +34,4 @@ cachetools
 bing_image_downloader
 PyYAML>=5.3.1
 envparse
+loguru
