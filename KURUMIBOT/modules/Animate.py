@@ -9,6 +9,7 @@ from telethon.tl import functions
 from telethon.tl.types import *
 
 from KURUMIBOT import *
+from KURUMIBOT import TEMP_DOWNLOAD_DIRECTORY
 from KURUMIBOT.events import register
 from KURUMIBOT.ubot import ubot
 
