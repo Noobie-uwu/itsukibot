@@ -4,6 +4,7 @@ from telethon.tl.types import *
 
 from KURUMIBOT import *
 from KURUMIBOT.events import register
+from KURUMIBOT.ubot import ubot
 
 @register(pattern="^/animate (.*)")
 async def stickerizer(event):
