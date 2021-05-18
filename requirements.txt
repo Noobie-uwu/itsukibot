@@ -1,4 +1,3 @@
-deemojify
 future
 emoji
 lxml
