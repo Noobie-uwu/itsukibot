@@ -32,3 +32,5 @@ alphabet_detector
 pyrate-limiter
 cachetools
 bing_image_downloader
+PyYAML>=5.3.1
+envparse
