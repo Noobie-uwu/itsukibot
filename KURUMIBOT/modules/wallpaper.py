@@ -11,15 +11,7 @@ from PIL import Image
 from KURUMIBOT.events import register
 
 
-@register(pattern="^/wall ?(.*)"), about={
-    'header': "Search Wallpaper",
-    'flags': {
-        '-l': "Limit of Wallpapers",
-        '-doc': "Send as Documents (Recommended)"
-    },
-    'description': 'Search and Download Hd Wallpaper from Unsplash and upload to Telegram',
-    'usage': "{tr}wall [Query]",
-    'examples': "{tr}wall luffy"})
+@register(pattern="^/wall ?(.*)")
 async def wall_(msg: event):
 
     if os.path.exists("wallpapers/"):
