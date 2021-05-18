@@ -11,7 +11,7 @@ from PIL import Image
 from KURUMIBOT.events import register
 
 
-@register("wall", about={
+@register(pattern="^/wall ?(.*)"), about={
     'header': "Search Wallpaper",
     'flags': {
         '-l': "Limit of Wallpapers",
@@ -20,7 +20,7 @@ from KURUMIBOT.events import register
     'description': 'Search and Download Hd Wallpaper from Unsplash and upload to Telegram',
     'usage': "{tr}wall [Query]",
     'examples': "{tr}wall luffy"})
-async def wall_(msg: Message):
+async def wall_(msg: event):
 
     if os.path.exists("wallpapers/"):
         shutil.rmtree("wallpapers/", ignore_errors=True)
@@ -29,14 +29,14 @@ async def wall_(msg: Message):
 
     if msg.filtered_input_str:
         qu = msg.filtered_input_str
-        await msg.edit(f"`Seraching Wallpapers for {qu}`")
+        await msg.reply(f"`Seraching Wallpapers for {qu}`")
         results = requests.get(
             "https://api.unsplash.com/search/"
             f"photos?client_id=HWlOs9dNZIbYEkjp87fiEzC9rmE6rKM64tBqXBOLzu8&query={qu}"
         )
 
         if results.status_code != 200:
-            return await msg.edit('**Result Not Found**')
+            return await msg.reply('**Result Not Found**')
         _json = results.json()['results']
         if len(_json) < limit:
             limit = len(_json)
@@ -69,5 +69,5 @@ async def wall_(msg: Message):
         shutil.rmtree("wallpapers/", ignore_errors=True)
         await msg.delete()
     else:
-        await msg.edit('**Give me Something to search.**')
+        await msg.reply('**Give me Something to search.**')
         await msg.reply_sticker('CAADAQADmQADTusQR6fPCVZ3EhDoFgQ')
