@@ -6,8 +6,6 @@ from KURUMIBOT.modules.disable import DisableAbleCommandHandler
 from telegram import Update
 from telegram.ext import CallbackContext, run_async
 
-# Wallpapers module by @TheRealPhoenix using wall.alphacoders.com
-
 
 @run_async
 def wall(update: Update, context: CallbackContext):
@@ -24,7 +22,7 @@ def wall(update: Update, context: CallbackContext):
         caption = query
         term = query.replace(" ", "%20")
         json_rep = r.get(
-            f"https://api.unsplash.com/search/"
+            f"https://api.unsplash.com/search/={term}"
         ).json()
         if not json_rep.get("success"):
             msg.reply_text(f"An error occurred! Report this @{SUPPORT_CHAT}")
