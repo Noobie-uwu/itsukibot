@@ -12,16 +12,16 @@ from KURUMIBOT.events import register
 
 
 @register(pattern="^/wall ?(.*)")
-async def wall_(msg: event):
+async def wall(event):
 
     if os.path.exists("wallpapers/"):
         shutil.rmtree("wallpapers/", ignore_errors=True)
 
-    limit = min(int(msg.flags.get('-l', 8)), 10)
+    limit = min(int(event.flags.get('-l', 8)), 10)
 
     if msg.filtered_input_str:
-        qu = msg.filtered_input_str
-        await msg.reply(f"`Seraching Wallpapers for {qu}`")
+        qu = event.filtered_input_str
+        await event.reply(f"`Seraching Wallpapers for {qu}`")
         results = requests.get(
             "https://api.unsplash.com/search/"
             f"photos?client_id=HWlOs9dNZIbYEkjp87fiEzC9rmE6rKM64tBqXBOLzu8&query={qu}"
@@ -55,11 +55,11 @@ async def wall_(msg: event):
                     new_im.save(img, 'JPEG', optimize=True)
             ss.append(InputMediaPhoto(str(img)))
 
-        await msg.reply_chat_action(
+        await event.reply_chat_action(
             "upload_photo" if '-doc' not in msg.flags else "upload_document")
-        await msg.reply_media_group(ss, True)
+        await event.reply_media_group(ss, True)
         shutil.rmtree("wallpapers/", ignore_errors=True)
-        await msg.delete()
+        await event.delete()
     else:
-        await msg.reply('**Give me Something to search.**')
-        await msg.reply_sticker('CAADAQADmQADTusQR6fPCVZ3EhDoFgQ')
+        await event.reply('**Give me Something to search.**')
+        await event.reply_sticker('CAADAQADmQADTusQR6fPCVZ3EhDoFgQ')
