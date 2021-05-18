@@ -1,4 +1,5 @@
 import random
+import emoji
 from telethon import *
 from telethon.tl import functions
 from telethon.tl.types import *
