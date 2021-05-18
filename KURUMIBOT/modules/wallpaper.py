@@ -1,56 +1,25 @@
-from random import randint
+import os
+from random import choice
+from shutil import rmtree
+from bing_image_downloader import downloader
 
-import requests as r
-from KURUMIBOT import SUPPORT_CHAT, WALL_API, dispatcher
-from KURUMIBOT.modules.disable import DisableAbleCommandHandler
-from telegram import Update
-from telegram.ext import CallbackContext, run_async
+from KURUMIBOT.events import register
 
-
-@run_async
-def wall(update: Update, context: CallbackContext):
-    chat_id = update.effective_chat.id
-    msg = update.effective_message
-    args = context.args
-    msg_id = update.effective_message.message_id
-    bot = context.bot
-    query = " ".join(args)
-    if not query:
-        msg.reply_text("Please enter a query!")
-        return
-    else:
-        caption = query
-        term = query.replace(" ", "%20")
-        json_rep = r.get(
-            "https://api.unsplash.com/search/"
-            f"photos?HWlOs9dNZIbYEkjp87fiEzC9rmE6rKM64tBqXBOLzu8&query={term}
-        ).json()
-        if not json_rep.get("success"):
-            msg.reply_text(f"An error occurred! Report this @{SUPPORT_CHAT}")
-        else:
-            wallpapers = json_rep.get("wallpapers")
-            if not wallpapers:
-                msg.reply_text("No results found! Refine your search.")
-                return
-            else:
-                index = randint(0, len(wallpapers) - 1)  # Choose random index
-                wallpaper = wallpapers[index]
-                wallpaper = wallpaper.get("url_image")
-                wallpaper = wallpaper.replace("\\", "")
-                bot.send_photo(
-                    chat_id,
-                    photo=wallpaper,
-                    caption='Preview',
-                    reply_to_message_id=msg_id,
-                    timeout=60)
-                bot.send_document(
-                    chat_id,
-                    document=wallpaper,
-                    filename='wallpaper',
-                    caption=caption,
-                    reply_to_message_id=msg_id,
-                    timeout=60)
-
-
-WALLPAPER_HANDLER = DisableAbleCommandHandler("wall", wall)
-dispatcher.add_handler(WALLPAPER_HANDLER)
+@register(pattern="^/wall ?(.*)")
+async def wall(event):
+    inp = event.pattern_match.group(1)
+    if not inp:
+        return await event.reply("Please enter a query!")
+    nn = await event.reply("Processing Keep Patience...")
+    query = f"hd {inp}"
+    args = {
+        "keywords": query,
+        "limit": 10,
+        "format": "jpg",
+        "output_directory": "./resources/downloads/",
+    }
+    downloader.download(args)
+    xx = choice(os.listdir(os.path.abspath(f"./resources/downloads/{query}/")))
+    await event.client.send_file(event.chat_id, f"./resources/downloads/{query}/{xx}")
+    rmtree(f"./resources/downloads/{query}/")
+    await nn.delete()
