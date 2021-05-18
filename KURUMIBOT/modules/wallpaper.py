@@ -22,7 +22,7 @@ def wall(update: Update, context: CallbackContext):
         caption = query
         term = query.replace(" ", "%20")
         json_rep = r.get(
-            f"https://api.unsplash.com/search/={term}"
+            f"https://api.unsplash.com/search&method=search&term={term}"
         ).json()
         if not json_rep.get("success"):
             msg.reply_text(f"An error occurred! Report this @{SUPPORT_CHAT}")
