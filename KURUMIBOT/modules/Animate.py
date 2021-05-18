@@ -1,4 +1,8 @@
+import io
+import json
+import os
 import random
+import re
 import emoji
 from telethon import *
 from telethon.tl import functions
